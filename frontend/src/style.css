@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Surface system */
+  --surface-0: #09090b;
+  --surface-1: rgba(14, 14, 20, 0.92);
+  --surface-2: rgba(20, 20, 30, 0.75);
+  --surface-3: rgba(28, 28, 42, 0.6);
+  --surface-glass: rgba(255, 255, 255, 0.03);
+  --surface-glass-hover: rgba(255, 255, 255, 0.055);
+  --surface-glass-active: rgba(255, 255, 255, 0.07);
+
+  /* Gradient mesh */
+  --mesh-1: rgba(30, 10, 60, 0.4);
+  --mesh-2: rgba(10, 22, 40, 0.35);
+  --mesh-3: rgba(15, 10, 30, 0.3);
+  --mesh-4: rgba(6, 18, 24, 0.25);
+
+  /* Accent */
+  --teal: #2dd4bf;
+  --teal-dim: #14b8a6;
+  --teal-glow: rgba(45, 212, 191, 0.12);
+  --teal-glow-strong: rgba(45, 212, 191, 0.25);
+  --coral: #fb7185;
+  --coral-dim: #e11d48;
+  --coral-glow: rgba(251, 113, 133, 0.1);
+  --peach: #fdba74;
+  --lavender: #c4b5fd;
+
+  /* Signal */
+  --sig-ok: #4ade80;
+  --sig-warn: #fbbf24;
+  --sig-bad: #f87171;
+  --sig-info: #60a5fa;
+
+  /* Text */
+  --t-bright: #fafafa;
+  --t-primary: #a1a1aa;
+  --t-secondary: #71717a;
+  --t-muted: #3f3f46;
+  --t-ghost: #27272a;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.03);
+  --border-focus: rgba(45, 212, 191, 0.35);
+
+  /* Radius */
+  --r-xl: 16px;
+  --r-lg: 12px;
+  --r-md: 8px;
+  --r-sm: 6px;
+
+  /* Type */
+  --f-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --f-mono: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', monospace;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.45);
+  --shadow-glow: 0 0 24px rgba(45, 212, 191, 0.06);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { height: 100%; width: 100%; overflow: hidden; }
+
+body {
+  font-family: var(--f-sans);
+  background: var(--surface-0);
+  color: var(--t-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* macOS titlebar drag region */
+.titlebar {
+  height: 38px;
+  -webkit-app-region: drag;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+}
+
+.sidebar { -webkit-app-region: drag; }
+
+button, a, input, select, textarea,
+.nav-item, .refresh-btn, .k8s-cluster, .cal-day, .cal-holiday-item,
+.calendar-event, .forecast-day, .mini-gauge,
+.main { -webkit-app-region: no-drag; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--t-ghost); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--t-muted); }
+
+::selection { background: var(--teal-glow-strong); color: var(--t-bright); }
+
+/* Keyframes */
+@keyframes appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
