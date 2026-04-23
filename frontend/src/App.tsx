@@ -22,8 +22,8 @@ const DEFAULT_CONFIG: AppConfig = {
   ],
   k8s: {
     contexts: [
-      'aks-dev-ris-gerwece-001', 'aks-prod-ris-gerwece-001', 'aks-staging-ris-gerwece-001',
-      'k8s-dev-mps-eucentral-001', 'k8s-prod-mps-eucentral-001', 'k8s-stage-mps-eucentral-001',
+      'my-aks-dev', 'my-aks-prod', 'my-aks-staging',
+      'my-k8s-dev', 'my-k8s-prod', 'my-k8s-staging',
     ],
     kubeconfig: '', refreshSeconds: 15,
   },
