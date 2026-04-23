@@ -4,6 +4,8 @@ A desktop dashboard I built for myself to keep tabs on everything that matters d
 
 I got tired of switching between Lens, browser tabs, and Activity Monitor, so I put together something that shows me exactly what I need at a glance.
 
+[![Watch the demo](docs/thumbnail.jpg)](docs/demo.mp4)
+
 ![Overview](screenshots/overview.png)
 
 ## What it does
