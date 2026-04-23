@@ -3,3 +3,4 @@ node_modules
 frontend/dist
 .omc/
 .DS_Store
+frontend/*.md5
